@@ -175,7 +175,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108943884}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -619,7 +619,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &906078187
 Transform:
   m_ObjectHideFlags: 0
@@ -765,7 +765,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -928,55 +928,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1212053352
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1212053354}
-  - component: {fileID: 1212053353}
-  m_Layer: 0
-  m_Name: BackgroundSpawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1212053353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1212053352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa58fab961cfe164d8ec80234f75abec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: 21300000, guid: 175722cd923e23a488a567701699b510, type: 3}
-  - {fileID: 21300000, guid: d8ef36b71ed5c2c4d818208023e96859, type: 3}
-  obstacleRenderer: {fileID: 0}
-  polygonCollider: {fileID: 0}
-  moveSpeed: 0
---- !u!4 &1212053354
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1212053352}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -44.918007, y: 11.899372, z: -513.7688}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1264103589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,8 +960,8 @@ MonoBehaviour:
   obstaclePrefab: {fileID: 8980977041786474966, guid: 3d009f1c76c431f4eb4861b1e0af3ac5, type: 3}
   checkpointPrefab: {fileID: 8782379721514618129, guid: 6afc44f7dd9dfcd4da86be3908603957, type: 3}
   eskyPrefab: {fileID: 5258148507083283525, guid: 910e92d2794a0b24499abeacd0cda694, type: 3}
-  backgroundPrefabs: {fileID: 0}
-  objectSpeed: 15
+  backgroundPrefabs: {fileID: 2436625168613731657, guid: 2777bf58e8629554bb670ac0e0e16b84, type: 3}
+  objectSpeed: 7
 --- !u!4 &1264103591
 Transform:
   m_ObjectHideFlags: 0
@@ -1041,7 +992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1344742629
 Transform:
   m_ObjectHideFlags: 0

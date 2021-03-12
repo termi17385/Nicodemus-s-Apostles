@@ -20,15 +20,17 @@ public class Spawner : MonoBehaviour
     private int spawnChooser = 13;
 
     // Object move at this Speed.
-    public int objectSpeed = 15;
+    public int objectSpeed = 7;
 
     // Spawn time.
     private float spawnTime = 0;
     private float spawnTime2 = 0;
 
     // Min and max spawn time.
-    private float minSpawnTime = 0.5f;
-    private float maxSpawnTime = 2;
+    private float minSpawnTime = 2;
+    private float maxSpawnTime = 7;
+
+    private Vector3 objectYIncrease;
 
     private void Start()
     {
@@ -60,8 +62,10 @@ public class Spawner : MonoBehaviour
             // Not to spawn background stuff over the door or esky.
             if (spawnChooser > 2)
             {
+                // Get a Vector 3 to add to the current spawn place
+                objectYIncrease = new Vector3(0, 2, 0);
                 // Makes a background object.
-                Instantiate(backgroundPrefabs, transform.position, Quaternion.identity, transform);
+                Instantiate(backgroundPrefabs, transform.position + objectYIncrease, Quaternion.identity, transform);
             }
             // Resets time.
             spawnTime2 = Random.Range(minSpawnTime, maxSpawnTime);
@@ -88,8 +92,10 @@ public class Spawner : MonoBehaviour
             }
             else if (spawnChooser == 1)
             {
+                // Get a Vector 3 to add to the current spawn place
+                objectYIncrease = new Vector3(0, 2, 0);
                 // Makes a checkpoint object.
-                Instantiate(checkpointPrefab, transform.position, Quaternion.identity, transform);
+                Instantiate(checkpointPrefab, transform.position + objectYIncrease, Quaternion.identity, transform);
                 // Decreases spawner count by one.
                 spawnChooser--;
                 // Reset the spawnTime to 1 so that the esky and checkpoint are close.
