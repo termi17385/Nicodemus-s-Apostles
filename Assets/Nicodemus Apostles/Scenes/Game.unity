@@ -628,7 +628,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906078186}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8192675, y: 3.8084311, z: 1000}
+  m_LocalPosition: {x: 0.8192675, y: 3.8084311, z: 137.6}
   m_LocalScale: {x: 2.7667432, y: 1.9657222, z: 1}
   m_Children: []
   m_Father: {fileID: 747171104}
@@ -765,7 +765,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -856,7 +856,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028722756}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.5, y: -0.17, z: 83.9}
+  m_LocalPosition: {x: -6.5, y: -0.17, z: 66}
   m_LocalScale: {x: 1.8988, y: 1.8988, z: 1.8988}
   m_Children: []
   m_Father: {fileID: 0}
@@ -961,7 +961,7 @@ MonoBehaviour:
   checkpointPrefab: {fileID: 8782379721514618129, guid: 6afc44f7dd9dfcd4da86be3908603957, type: 3}
   eskyPrefab: {fileID: 5258148507083283525, guid: 910e92d2794a0b24499abeacd0cda694, type: 3}
   backgroundPrefabs: {fileID: 2436625168613731657, guid: 2777bf58e8629554bb670ac0e0e16b84, type: 3}
-  objectSpeed: 7
+  objectSpeed: 10
 --- !u!4 &1264103591
 Transform:
   m_ObjectHideFlags: 0
@@ -970,7 +970,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264103589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: -2.5, z: 0}
+  m_LocalPosition: {x: 15, y: -2.5, z: 85.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1001,7 +1001,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344742628}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7963675, y: -4.5422688, z: 1000}
+  m_LocalPosition: {x: 0.7963675, y: -4.5422688, z: 137.6}
   m_LocalScale: {x: 2.7541664, y: 23.471838, z: 1}
   m_Children: []
   m_Father: {fileID: 747171104}

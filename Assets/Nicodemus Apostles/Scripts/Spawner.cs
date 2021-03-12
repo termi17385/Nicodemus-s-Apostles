@@ -16,11 +16,11 @@ public class Spawner : MonoBehaviour
     public GameObject eskyPrefab;
     public GameObject backgroundPrefabs;
 
-    // Cycles through 13 before it spawns a check point.
-    private int spawnChooser = 13;
+    // Cycles through 9 before it spawns a check point.
+    private int spawnChooser = 9;
 
     // Object move at this Speed.
-    public int objectSpeed = 7;
+    public int objectSpeed = 10;
 
     // Spawn time.
     private float spawnTime = 0;
@@ -28,7 +28,7 @@ public class Spawner : MonoBehaviour
 
     // Min and max spawn time.
     private float minSpawnTime = 2;
-    private float maxSpawnTime = 7;
+    private float maxSpawnTime = 4;
 
     private Vector3 objectYIncrease;
 
@@ -62,8 +62,9 @@ public class Spawner : MonoBehaviour
             // Not to spawn background stuff over the door or esky.
             if (spawnChooser > 2)
             {
-                // Get a Vector 3 to add to the current spawn place
-                objectYIncrease = new Vector3(0, 2, 0);
+                // Get a Vector 3 to add to the current spawn place.
+                // We are adding Y for height and Z to make sure it is at the back.
+                objectYIncrease = new Vector3(0, 2, 2);
                 // Makes a background object.
                 Instantiate(backgroundPrefabs, transform.position + objectYIncrease, Quaternion.identity, transform);
             }
@@ -79,13 +80,13 @@ public class Spawner : MonoBehaviour
             // Waits for a random ammount of time.
             yield return new WaitForSeconds(spawnTime);
 
-            // Makes a object going down from 13.
+            // Makes a object going down from 9.
             if (spawnChooser <= 0)
             {
                 // Makes a esky object.
                 Instantiate(eskyPrefab, transform.position, Quaternion.identity, transform);
-                // Resets spawner count to 13.
-                spawnChooser = 13;
+                // Resets spawner count to 9.
+                spawnChooser = 9;
                 // Reset the spawnTime to another random one.
                 spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
                 print("esky");

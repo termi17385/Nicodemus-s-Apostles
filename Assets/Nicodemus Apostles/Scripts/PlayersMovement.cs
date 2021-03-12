@@ -45,7 +45,7 @@ public class PlayersMovement : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
 
         // Set our variables here
-        jumpHeight = 15;
+        jumpHeight = 20;
         playerSpeed = 10;
         dead = false;
         holdingHeart = true;
