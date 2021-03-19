@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8577942419410402608}
   - component: {fileID: 4993732640896226626}
   - component: {fileID: -197465138618726967}
+  - component: {fileID: -3527890527732897448}
   m_Layer: 0
   m_Name: DoctorSpawner
   m_TagString: Untagged
@@ -158,3 +159,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-3527890527732897448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8782379721514618129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce97a84dc946c364fa9107b7e5c62ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeDelay: 8
+  oldObject: {fileID: 8782379721514618129}

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -5734573448107709881}
   - component: {fileID: -4474237934541863022}
   - component: {fileID: -5058337316014206975}
+  - component: {fileID: 6233012505309262435}
   m_Layer: 3
   m_Name: EskySpawner
   m_TagString: Untagged
@@ -158,3 +159,17 @@ PolygonCollider2D:
       - {x: -0.5877852, y: -0.80901706}
       - {x: 0.58778536, y: -0.80901694}
       - {x: 0.9510565, y: 0.30901712}
+--- !u!114 &6233012505309262435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5258148507083283525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce97a84dc946c364fa9107b7e5c62ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeDelay: 8
+  oldObject: {fileID: 5258148507083283525}
