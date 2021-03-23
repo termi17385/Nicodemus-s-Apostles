@@ -12,7 +12,9 @@ public class PlayersMovement : MonoBehaviour
 
     // Player Score
     private float playerScore;
+    public static float highScore;
     public Text playerScoreDisplay;
+    public Text highScoreDisplay;
     
     // Basic collider stuff
     private Collider2D charCollieder;
@@ -26,7 +28,7 @@ public class PlayersMovement : MonoBehaviour
     // Checking if he is picking up a heart.
     private bool heartPickedUp;
     // Checking if he is dead.
-    private bool dead;
+    public bool dead;
 
     // Checking if he is holding a heart.
     private bool holdingHeart;
@@ -35,6 +37,9 @@ public class PlayersMovement : MonoBehaviour
     [SerializeField] private LayerMask whatIsNurse;        //reminder to make a layer for "Nurse"
     [SerializeField] private LayerMask whatIsEsky;        //reminder to make a layer for "Esky"
     [SerializeField] private LayerMask whatIsObstacle;        //reminder to make a layer for "obstacle"
+
+    public GameObject DeathPanel;
+    public static int heartsCollected;
 
 
     // Start is called before the first frame update
@@ -49,6 +54,9 @@ public class PlayersMovement : MonoBehaviour
         playerSpeed = 10;
         dead = false;
         holdingHeart = true;
+        heartsCollected = 0;
+
+        highScoreDisplay.text = ("High Score: ") + PlayerPrefs.GetFloat("High Score:").ToString("F0");
     }
 
     // Update is called once per frame
@@ -79,6 +87,7 @@ public class PlayersMovement : MonoBehaviour
         if (heartDelivered)
         {
             playerHeartDelivered();
+            heartsCollected++;
 
             // Stops checking collision with Doctor.
             heartDelivered = false;
@@ -104,6 +113,7 @@ public class PlayersMovement : MonoBehaviour
             }
         }
 
+
         // Player Score displayed as whole number
         playerScore += playerSpeed * Time.deltaTime;
         playerScoreDisplay.text = playerScore.ToString("F0");
@@ -111,10 +121,21 @@ public class PlayersMovement : MonoBehaviour
         // Animation switch
         playerAnimator.SetFloat("Speed", playerSpeed);
         playerAnimator.SetBool("Grounded", grounded);
+
+        if (playerScore >= highScore)
+        {
+            highScore = playerScore;
+            highScoreDisplay.text = "High Score: " + playerScore.ToString("F0");
+            PlayerPrefs.SetFloat("High Score:", highScore);
+        }
+
     }
 
     private void playerDeath()
     {
+        Time.timeScale = 0;
+        DeathPanel.SetActive(true);
+        
         // pause game
         // enable pause menu
         // disable player controls

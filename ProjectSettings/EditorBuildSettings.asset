@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Nicodemus Apostles/Scenes/Splash Screen.unity
+    guid: a2f2266a053be4943a351ac48fc4ec81
+  - enabled: 1
+    path: Assets/Nicodemus Apostles/Scenes/MainMenu.unity
+    guid: 6d005f948a5ff24478f4050a58306ac9
+  - enabled: 1
     path: Assets/Nicodemus Apostles/Scenes/Game.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
