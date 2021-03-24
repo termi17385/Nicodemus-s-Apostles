@@ -50,6 +50,7 @@ public class PlayersMovement : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
 
         // Set our variables here
+        Time.timeScale = 1;
         jumpHeight = 20;
         playerSpeed = 10;
         dead = false;
@@ -62,7 +63,6 @@ public class PlayersMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         // Check if grounded if colliding with Ground layer.
         grounded = Physics2D.IsTouchingLayers(charCollieder, whatIsGrounded);     //defines grounded boolean as being true when the player is touching the ground
 
@@ -81,7 +81,6 @@ public class PlayersMovement : MonoBehaviour
         {
             playerDeath();
         }
-
 
         // Check if Heart is delivered.
         if (heartDelivered)

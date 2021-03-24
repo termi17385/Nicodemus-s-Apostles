@@ -23,14 +23,17 @@ public class SceneLoading : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    float prevTimeScale = 1;
     public void Pause()
     {
+        prevTimeScale = Time.timeScale;
         Time.timeScale = 0;
+        
     }
 
     public void Resume()
     {
-        Time.timeScale = 1;
+        Time.timeScale = prevTimeScale;
             //(PlayersMovement.heartsCollected * 0.2) ;
             // 1 + hearts delivered *0.2 to resume as same speed as previous
             // in theory save hearts delivered +1 each time delivered(
@@ -44,8 +47,11 @@ public class SceneLoading : MonoBehaviour
 
     public void RestartGame()
     {
+        Debug.Log(Time.timeScale);
         Time.timeScale = 1;
+        
         SceneManager.LoadScene(2);
+        Debug.Log(Time.timeScale);
         Time.timeScale = 1;
     }
 
