@@ -56,6 +56,7 @@ public class PlayersMovement : MonoBehaviour
         dead = false;
         holdingHeart = true;
         heartsCollected = 0;
+        grounded = true;
 
         highScoreDisplay.text = ("High Score: ") + PlayerPrefs.GetFloat("High Score:").ToString("F0");
     }
@@ -120,6 +121,8 @@ public class PlayersMovement : MonoBehaviour
         // Animation switch
         playerAnimator.SetFloat("Speed", playerSpeed);
         playerAnimator.SetBool("Grounded", grounded);
+        playerAnimator.SetBool("HoldingHeart", holdingHeart);
+
 
         if (playerScore >= highScore)
         {

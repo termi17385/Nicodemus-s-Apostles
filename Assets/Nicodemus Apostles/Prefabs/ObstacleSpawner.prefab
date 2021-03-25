@@ -101,9 +101,11 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: 8e23b92f616f6a543be4f3ec120d3b29, type: 3}
   - {fileID: 21300000, guid: 24fda8612b13c0347be2985df25ccad8, type: 3}
-  - {fileID: 21300000, guid: 464e8e3c2f028be4c8f7577efd708c7a, type: 3}
-  - {fileID: 21300000, guid: 464e8e3c2f028be4c8f7577efd708c7a, type: 3}
-  - {fileID: 21300000, guid: 464e8e3c2f028be4c8f7577efd708c7a, type: 3}
+  - {fileID: 21300000, guid: 3aff4634afed1284c925ebd332a0dee3, type: 3}
+  - {fileID: 21300000, guid: 1574ebb510afdf14aa550184f121b09f, type: 3}
+  - {fileID: 21300000, guid: 57eeef85ddf192841a79cc189419515e, type: 3}
+  - {fileID: 21300000, guid: 0b4165e11ce217d43964df868105ef77, type: 3}
+  - {fileID: 21300000, guid: a26cbdebfdc733c448063ea9ea8672fb, type: 3}
   obstacleRenderer: {fileID: 5757934186707147917}
   polygonCollider: {fileID: 4134711938676750539}
   moveSpeed: 0

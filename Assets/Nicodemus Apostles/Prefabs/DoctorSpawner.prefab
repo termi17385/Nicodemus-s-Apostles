@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4993732640896226626}
   - component: {fileID: -197465138618726967}
   - component: {fileID: -3527890527732897448}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: DoctorSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
