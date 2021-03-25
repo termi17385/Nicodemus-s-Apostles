@@ -145,8 +145,12 @@ public class PlayersMovement : MonoBehaviour
 
     private void playerHeartDelivered()
     {
-        // Increase game speed.
-        Time.timeScale += 0.2f;
+
+        // Increase game speed if not going super fast.
+        if (Time.timeScale > 0.3)
+        {
+            Time.timeScale += 0.002f;
+        }
 
         // If holding a heart drop it and get a bonus.
         if (holdingHeart)

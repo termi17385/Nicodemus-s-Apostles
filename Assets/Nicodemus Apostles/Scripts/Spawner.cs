@@ -27,8 +27,8 @@ public class Spawner : MonoBehaviour
     private float spawnTime2 = 0;
 
     // Min and max spawn time.
-    private float minSpawnTime = 2;
-    private float maxSpawnTime = 4;
+    private float minSpawnTime = 0.8f;
+    private float maxSpawnTime = 2.5f;
 
     private Vector3 objectYIncrease;
 
@@ -64,7 +64,7 @@ public class Spawner : MonoBehaviour
             {
                 // Get a Vector 3 to add to the current spawn place.
                 // We are adding Y for height and Z to make sure it is at the back.
-                objectYIncrease = new Vector3(0, 2, 2);
+                objectYIncrease = new Vector3(0, 2.4f, 2);
                 // Makes a background object.
                 Instantiate(backgroundPrefabs, transform.position + objectYIncrease, Quaternion.identity, transform);
             }
@@ -94,7 +94,7 @@ public class Spawner : MonoBehaviour
             else if (spawnChooser == 1)
             {
                 // Get a Vector 3 to add to the current spawn place
-                objectYIncrease = new Vector3(0, 2.1f, 0);
+                objectYIncrease = new Vector3(0, 2.35f, 0);
                 // Makes a checkpoint object.
                 Instantiate(checkpointPrefab, transform.position + objectYIncrease, Quaternion.identity, transform);
                 // Decreases spawner count by one.
