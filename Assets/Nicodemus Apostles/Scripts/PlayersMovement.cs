@@ -58,7 +58,7 @@ public class PlayersMovement : MonoBehaviour
         heartsCollected = 0;
         grounded = true;
 
-        highScoreDisplay.text = ("High Score: ") + PlayerPrefs.GetFloat("High Score:").ToString("F0");
+        highScoreDisplay.text = ("High Score: ") + PlayerPrefs.GetFloat("High Score:").ToString("F0"); // calls high score pref and displays as a string for text box to display
     }
 
     // Update is called once per frame
@@ -124,7 +124,7 @@ public class PlayersMovement : MonoBehaviour
         playerAnimator.SetBool("HoldingHeart", holdingHeart);
 
 
-        if (playerScore >= highScore)
+        if (playerScore >= highScore) // If current player score is higher than the set high score will save high score to prefs and show high score as a string to display in game counter
         {
             highScore = playerScore;
             highScoreDisplay.text = "High Score: " + playerScore.ToString("F0");
@@ -133,14 +133,11 @@ public class PlayersMovement : MonoBehaviour
 
     }
 
-    private void playerDeath()
+    private void playerDeath() // On death sets time scale to 0 to pause and activates the Death Panel.
     {
-        Time.timeScale = 0;
+        Time.timeScale = 0; 
         DeathPanel.SetActive(true);
-        
-        // pause game
-        // enable pause menu
-        // disable player controls
+    
     }
 
     private void playerHeartDelivered()
