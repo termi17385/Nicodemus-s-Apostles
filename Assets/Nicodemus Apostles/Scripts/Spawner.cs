@@ -94,7 +94,7 @@ public class Spawner : MonoBehaviour
             else if (spawnChooser == 1)
             {
                 // Get a Vector 3 to add to the current spawn place
-                objectYIncrease = new Vector3(0, 2, 0);
+                objectYIncrease = new Vector3(0, 2.1f, 0);
                 // Makes a checkpoint object.
                 Instantiate(checkpointPrefab, transform.position + objectYIncrease, Quaternion.identity, transform);
                 // Decreases spawner count by one.

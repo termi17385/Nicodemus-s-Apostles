@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: 1b44cac59f4f179499a576f34086dbd0, type: 3}
+  - {fileID: 21300000, guid: 75a85497942a17b489b059907ba3d59b, type: 3}
   obstacleRenderer: {fileID: -197465138618726967}
   polygonCollider: {fileID: 8577942419410402608}
   moveSpeed: 0
